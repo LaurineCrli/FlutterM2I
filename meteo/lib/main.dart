@@ -10,7 +10,7 @@ import 'api_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await _initializeSharedPreferences(); // Initialisation de SharedPreferences
+  await _initializeSharedPreferences(); 
   runApp(MyApp());
 }
 
@@ -43,30 +43,30 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final ApiService _apiService = ApiService();
   final TextEditingController _controller = TextEditingController();
-  List<String> _savedCities = []; // Liste des villes sauvegardées
+  List<String> _savedCities = [];
   Future<Map<String, dynamic>>? _weatherFuture;
   String _errorMessage = '';
   LatLng? _cityCoordinates;
 
   static const Map<String, String> weatherIcons = {
-    '01d': 'assets/soleil.png', // Soleil
-    '01n': 'assets/lune.png', // Lune
-    '02d': 'assets/soleil-nuage.png', // Soleil et nuages
-    '02n': 'assets/lune-nuage.png', // Lune et nuages
-    '03d': 'assets/nuage.png', // Nuageux
-    '03n': 'assets/nuage.png', // Nuageux
-    '04d': 'assets/nuage.png', // Nuageux
-    '04n': 'assets/nuage.png', // Nuageux
-    '09d': 'assets/nuage-pluie.png', // Pluie
-    '09n': 'assets/nuage-pluie.png', // Pluie
-    '10d': 'assets/nuage-pluie.png', // Pluie
-    '10n': 'assets/nuage-pluie.png', // Pluie
-    '11d': 'assets/nuage-orage.png', // Orage
-    '11n': 'assets/nuage-orage.png', // Orage
-    '13d': 'assets/nuage-flocons.png', // Neige
-    '13n': 'assets/nuage-flocons.png', // Neige
-    '50d': 'assets/nuage-brouillard.png', // Brouillard
-    '50n': 'assets/nuage-brouillard.png', // Brouillard
+    '01d': 'assets/soleil.png', 
+    '01n': 'assets/lune.png', 
+    '02d': 'assets/soleil-nuage.png', 
+    '02n': 'assets/lune-nuage.png', 
+    '03d': 'assets/nuage.png', 
+    '03n': 'assets/nuage.png', 
+    '04d': 'assets/nuage.png', 
+    '04n': 'assets/nuage.png', 
+    '09d': 'assets/nuage-pluie.png',
+    '09n': 'assets/nuage-pluie.png',
+    '10d': 'assets/nuage-pluie.png',
+    '10n': 'assets/nuage-pluie.png',
+    '11d': 'assets/nuage-orage.png', 
+    '11n': 'assets/nuage-orage.png', 
+    '13d': 'assets/nuage-flocons.png', 
+    '13n': 'assets/nuage-flocons.png', 
+    '50d': 'assets/nuage-brouillard.png', 
+    '50n': 'assets/nuage-brouillard.png', 
   };
 
   @override
@@ -75,7 +75,6 @@ class _HomePageState extends State<HomePage> {
     _loadSavedCities();
   }
 
-  // Charger les villes sauvegardées depuis SharedPreferences
   Future<void> _loadSavedCities() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -83,7 +82,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // Sauvegarder la liste des villes dans SharedPreferences
   Future<void> _saveCities() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('savedCities', _savedCities);
@@ -271,11 +269,10 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 16),
                   ElevatedButton(
                     onPressed: () {
-                      // Ajouter la ville actuelle à la liste des villes sauvegardées
                       if (_controller.text.isNotEmpty && !_savedCities.contains(_controller.text)) {
                         setState(() {
                           _savedCities.add(_controller.text);
-                          _saveCities(); // Sauvegarder la liste mise à jour
+                          _saveCities(); 
                         });
                       }
                     },
@@ -322,7 +319,7 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {
                             setState(() {
                               _savedCities.removeAt(index);
-                              _saveCities(); // Sauvegarder après suppression
+                              _saveCities(); 
                             });
                           },
                         ),
