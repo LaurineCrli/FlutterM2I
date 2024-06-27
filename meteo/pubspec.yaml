@@ -1,0 +1,44 @@
+name: meteo
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.1.1
+  flutter_dotenv: ^5.0.2
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
+  geolocator: ^9.0.2
+  shared_preferences: ^2.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/cyclone.png
+    - assets/flocons.png
+    - assets/foudre.png
+    - assets/lune.png
+    - assets/lune-nuage-pluie.png
+    - assets/nuage.png
+    - assets/nuage-brouillard.png
+    - assets/nuage-flocons.png
+    - assets/nuage-orage.png
+    - assets/nuage-pluie.png
+    - assets/parapluie.png
+    - assets/soleil.png
+    - assets/soleil-nuage.png
+    - assets/soleil-nuage-pluie.png
+    - assets/tempete.png
+    - assets/thermometre.png
+

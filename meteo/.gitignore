@@ -1,0 +1,28 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies.lock
+.flutter-version
+.buildlog
+pubspec.lock
+pubspec_overrides.yaml
+.idea/
+android/.gradle
+android/.idea
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+build/
+
+# Misc
+*.class
+*.lock
+*.log
+*.pyc
+*.swp
+*.DS_Store
+*.iml
+*.hprof
+
+# Sensitive files
+.env

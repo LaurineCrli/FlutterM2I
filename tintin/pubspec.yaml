@@ -1,0 +1,55 @@
+name: tintin
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  provider: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - data/albums.json
+    - img/coke-en-stock.jpg
+    - img/l-affaire-tournesol.jpg
+    - img/le-crabe-aux-pinces-d-or.jpg
+    - img/le-lotus-bleu.jpg
+    - img/les-7-boules-de-cristal.jpg
+    - img/les-bijoux-de-la-castafiore.jpg
+    - img/le-sceptre-d-ottokar.jpg
+    - img/les-cigares-du-pharaon.jpg
+    - img/le-secret-de-la-licorne.jpg
+    - img/le-temple-du-soleil.jpg
+    - img/l-etoile-mysterieuse.jpg
+    - img/le-tresor-de-rackham-le-rouge.jpg
+    - img/l-ile-noire.jpg
+    - img/l-oreile-cassee.jpg
+    - img/objectif-lune.jpg
+    - img/on-a-marche-sur-la-lune.jpg
+    - img/tintin-au-congo.jpg
+    - img/tintin-au-pays-de-l-or-noir.jpg
+    - img/tintin-au-pays-des-soviets.jpg
+    - img/tintin-au-tibet.jpg
+    - img/tintin-en-amerique.jpg
+    - img/tintin-et-l-alph-art.jpg
+    - img/tintin-et-les-picaros.jpg
+    - img/vol-714-pour-sydney.jpg
+
+ 
